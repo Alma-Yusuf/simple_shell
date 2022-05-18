@@ -1,29 +1,27 @@
-#include "shell.h"
-/**
- * main - the shell program start point
- * @ac: int num of command line args
- * @av: null term'd arr of strs contain args
- * @ev: null term'd arr of strs contain env vars
- * Return: int result. 0 in success, everything else is an error
- */
-int main(int ac, char **av, char **ev)
-{
-	sev_t sev;
-	int exitcode = 0;
-	(void)ac;
-	init_shell_env(&sev, av, ev);
+#include "alx.h"
 
-	while (sev.skywalker)
-	{
-		dis_prompt(sev);
-		getcom(&sev);
-		checker_alias(&sev);
-		if (!check_builtin(&sev))
-			actions(&sev);
-		dis_error(&sev);
-	}
-	write_log(&sev);
-	exitcode = sev.error;
-	cl_sev(&sev);
-	return (exitcode);
+/**
+ * main - Entry point of the program.
+ * @ac: The number of parameters passed to the executable file. In the case
+ * this variable will not be used.
+ * @av: The name of the program.
+ * Return: Always 0.
+ */
+int main(__attribute__((unused)) int ac, char **av)
+{
+	char *line;
+	size_t size;
+	int command_counter;
+
+	command_counter = 0;
+	signal(SIGINT, SIG_IGN);
+	do {
+		command_counter++;
+		line = NULL;
+		size = 0;
+		parse_line(line, size, command_counter, av);
+
+	} while (1);
+
+	return (0);
 }
