@@ -1,14 +1,15 @@
-Simple Shell
+# Simple Shell
+
 Project details
 Welcome to the Simple Shell project!! This program is a simple shell that can be compiled and launched from the command line.
 
-How to Compile
+# How to Compile
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
-Syntax
+# Syntax
 When using this shell, the syntax for running any command follows the familiar syntax when running a command in any other shell.
 
-Builtin Commands
+# Builtin Commands
 This shell supports a variety of commands:
 
 alias - create or list an alias
@@ -25,4 +26,4 @@ setenv - sets an environment variable
 
 unsetenv - unsets an environment variable
 
-MANDALORIAN$ help <builtin command>
+cisfun$ help <builtin command>
