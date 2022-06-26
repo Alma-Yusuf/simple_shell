@@ -7,7 +7,7 @@ hsh - Simple Shell
 hsh (does not support arguments)
 
 .SH DESCRIPTION
-Welcome to the Mandalorian Simple Shell project! This program is a simple shell that can be compiled and launched from the command line within any number of Linux versions.
+Welcome to the Simple Shell project! This program is a simple shell that can be compiled and launched from the command line within any number of Linux versions.
 
 .SH OVERVIEW
 The Mandalorian Simple Shell project is a major team project conducted by Barona Mosweu and Alma Yusuf, students at ALX.
